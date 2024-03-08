@@ -48,7 +48,6 @@ function Add() {
       .catch((error) => console.error(error));
   }, []);
 
-
   const handleSubmit = (e) => {
     e.preventDefault();
 
@@ -143,7 +142,7 @@ function Add() {
               onChange={handleInputChange}
             />
           </div>
-          
+
           <div>
             <label
               htmlFor="category"

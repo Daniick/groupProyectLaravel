@@ -11,8 +11,8 @@ import Categorias from "./pages/admin/Inventario/Categorias";
 import Compras from "./pages/admin/Compras/Compras";
 import Add from "./pages/admin/Inventario/Add";
 import AddCategories from "./pages/admin/Inventario/AddCategories";
-import EditProduct from "./pages/admin/Inventario/EditProduct"
-import EditCategories from "./pages/admin/Inventario/EditCategories"
+import EditProduct from "./pages/admin/Inventario/EditProduct";
+import EditCategories from "./pages/admin/Inventario/EditCategories";
 import Proveedores from "./pages/admin/Proveedores/Proveedores";
 import AddProveedor from "./pages/admin/Proveedores/AddProveedor";
 import EditProveedor from "./pages/admin/Proveedores/EditProveedor";
@@ -26,7 +26,6 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
-        
         <Route path="/" element={<LayoutAdmin />}>
           <Route path="dashboard" element={<Home />} />
           <Route path="inventario" element={<Inventario />} />
@@ -34,18 +33,21 @@ function App() {
           <Route path="compras" element={<Compras />} />
           <Route path="compras/add" element={<AddBill />} />
           <Route path="compras/view/:id" element={<ShowFactura />} />
-          
+
           <Route path="inventario/add" element={<Add />} />
           <Route path="inventario/edit/:id" element={<EditProduct />} />
 
           <Route path="categorias" element={<Categorias />} />
           <Route path="categorias/add" element={<AddCategories />} />
-          
+
           <Route path="categorias/edit/:id" element={<EditCategories />} />
-          
+
           <Route path="proveedores" element={<Proveedores />} />
           <Route path="proveedores/add" element={<AddProveedor />} />
-          <Route path="proveedores/EditProveedo/:id" element={<EditProveedo />} />
+          <Route
+            path="proveedores/EditProveedo/:id"
+            element={<EditProveedo />}
+          />
         </Route>
 
         <Route path="*" element={<Error404 />} />
