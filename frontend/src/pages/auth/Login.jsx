@@ -52,12 +52,14 @@ const Login = () => {
             )}
           </div>
           <div>
-            <button
-              type="submit"
-              className="w-full px-4 py-3 text-sm font-bold text-black uppercase rounded-lg bg-[#4791ff]"
-            >
-              Ingresar
-            </button>
+            <Link to="/dashboard">
+              <button
+                type="submit"
+                className="w-full px-4 py-3 text-sm font-bold text-black uppercase rounded-lg bg-[#4791ff]"
+              >
+                Ingresar
+              </button>
+            </Link>
           </div>
         </form>
         <div className="flex flex-col items-center gap-4">

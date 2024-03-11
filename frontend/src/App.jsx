@@ -1,8 +1,8 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import LayoutAdmin from "./layouts/LayoutAdmin";
 // import LayoutAuth from "./layouts/LayoutAuth";
-// import Login from "./pages/auth/Login";
-// import Register from "./pages/auth/Register";
+import Login from "./pages/auth/Login";
+import Register from "./pages/auth/Register";
 // import ForgetPassword from "./pages/auth/ForgetPassword";
 import Home from "./pages/admin/Home/Home";
 import Error404 from "./pages/Error404";
@@ -26,6 +26,8 @@ function App() {
   return (
     <BrowserRouter>
       <Routes>
+        <Route path="login" element={<Login />} />
+        <Route path="register" element={<Register />} />
         <Route path="/" element={<LayoutAdmin />}>
           <Route path="dashboard" element={<Home />} />
           <Route path="inventario" element={<Inventario />} />
